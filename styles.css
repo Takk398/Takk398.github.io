@@ -1,0 +1,22 @@
+.image-container {
+    height: 1000px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.information {
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    width: 80%;
+    text-wrap: wrap;
+}

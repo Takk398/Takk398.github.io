@@ -1,22 +1,60 @@
-.image-container {
-    height: 1000px;
-    width: auto;
+.content {
     display: flex;
     justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
 }
 
 .image-container img {
     width: auto;
     height: auto;
-    z-index: -1;
 }
 
 .information {
     position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 30%;
+    padding-top: 50px;
+    overflow: auto;
     font-size: 24px;
     color: white;
     text-align: center;
-    z-index: 1;
-    width: 80%;
-    text-wrap: wrap;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.opening-paragraph {
+    margin-top: 80px;
+}
+
+.names-table {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.names-table .left-column {
+    text-align: right;
+}
+
+.names-table .right-column {
+    text-align: left;
+}
+
+.names-table .middle-column {
+    padding: 0 32px;
+}
+
+.date-location {
+    margin-top: 80px;
 }

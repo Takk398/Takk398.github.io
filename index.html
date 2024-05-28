@@ -5,6 +5,8 @@
     <meta name="robots" content="noindex">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/images/wedding.ico">
+    <script src="https://kit.fontawesome.com/6084308bce.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="content">
@@ -15,20 +17,20 @@
                 저희 두 사람, 하나되는 첫 걸음에<br>
                 소중한 분을 초대합니다.</p>
                 
-                <p>We would be delighted if you could join us<br>
+                <p class="english">We would be delighted if you could join us<br>
                 in celebrating our wedding as we start our<br>
                 journey together as husband and wife.</p>
                 
                 <table class="names-table">
                     <tr>
                         <td class="left-column">
-                            <p>Paul Takerei<br>Ngaire Takerei</p>
+                            <p class="english">Paul Takerei<br>Ngaire Takerei</p>
                         </td>
                         <td class="middle-column">
                             <p lang="ko">장남</p>
                         </td>
                         <td class="right-column">
-                            <p><span lang="ko">휴 타케레이</span><br>Hugh Takerei</p>
+                            <p><span lang="ko">휴 타케레이</span><span class="english"><br>Hugh Takerei</span></p>
                         </td>
                     </tr>
                     <tr>
@@ -39,28 +41,30 @@
                             <p lang="ko">장녀</p>
                         </td>
                         <td class="right-column">
-                            <p><span lang="ko">김지아</span><br>Jeeah Kim</p>
+                            <p><span lang="ko">김지아</span><br><span class="english">Jeeah Kim</span></p>
                         </td>
                     </tr>
                 </table>
                 <div class="date-location">
                     <p><span lang="ko">토요일 10월 5일 오후 2시50분</span><br>
-                        Saturday 5th October 2:50PM</p>
+                    <span class="english">Saturday 5th October 2:50PM</span></p>
                         
                         
                     <p lang="ko">분당 앤스퀘어 아모르홀<br>
                     경기도 성남시 분당구 탄천상로<br>
                     151번길 20, 분당앤스퀘어 4층 오시는 길</p>
                     
-                    <p>Bundang Nsquare, Amor Hall, Level 4<br>
+                    <p class="english">Bundang Nsquare, Amor Hall, Level 4<br>
                     20, Tancheonsang-ro 151 beon-gil,<br>
                     Bundang-gu, Seongnam-si, Gyeonggi-do</p>
                 </div>
 
                 
-                <p lang="ko">마음 전하실곳</p>
+                <p lang="ko" class="last-paragraph">마음 전하실곳</p>
                 
-                <p lang="ko">정수진 • 신한은행 110 485 953182</p>
+                <p lang="ko" class="copy-account-number">정수진 • 신한은행 110 485 953182</p>
+                <button class="copy" onclick="copyAccount()"><i id="copyIcon" class="fa-solid fa-copy"></i> 계좌번호 복사</button>
+                <input type="hidden" id="accountNumber" value="110 485 953182"> 
             </div>
         </div>
     </div>

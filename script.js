@@ -5,12 +5,7 @@ function copyAccount() {
     navigator.clipboard.writeText(copyText.value)
         .then(() => {
             copyIcon.classList.remove("fa-copy");
-            copyIcon.classList.add("fa-clipboard-check");  
-
-            setTimeout(() => {
-                copyIcon.classList.remove("fa-clipboard-check");
-                copyIcon.classList.add("fa-copy");
-            }, 3000); // 1.5 seconds
+            copyIcon.classList.add("fa-clipboard-check");
         })
         .catch(err => {
             console.error('Failed to copy: ', err);

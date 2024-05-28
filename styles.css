@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -23,11 +27,22 @@
 .image-container {
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .image-container img {
-    width: auto;
+    width: 100%;
     height: auto;
+}
+
+
+@media (min-width: 768px) {
+    .image-container {
+        width: unset;
+    }
+    .image-container img {
+        width: auto;
+    }
 }
 
 .information {
@@ -91,4 +106,15 @@ button.copy {
     border-radius: 5px; 
     font-size: 16px;
     font-weight: 700;
+}
+
+button.copy:hover,
+button.copy:focus {
+    box-shadow: inset 0px 0px 6px 7px #00000024;
+    outline: none;
+}
+
+button.copy:active {
+    background-color: #8DA8C3;
+    color: white;
 }

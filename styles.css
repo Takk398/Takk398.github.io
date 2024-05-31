@@ -1,10 +1,14 @@
-body {
+body, html {
+    height: 100%;
     margin: 0;
 }
 
 .content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
     font-family: "Times New Roman", Times, serif;
     text-shadow: 2px 1.5px 2px #646464;
     ::-webkit-scrollbar {
@@ -24,34 +28,20 @@ body {
     }    
 }
 
+.sky {
+    background-color: #8ea7c1;
+    overflow: auto;
+    max-height: 40%;
+}
+
 .image-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-}
-
-
-@media (min-width: 768px) {
-    .image-container {
-        width: unset;
-    }
-    .image-container img {
-        width: auto;
-    }
+    background-image: url("images/Invitation_BG.jpg"); 
+    background-size: contain;
+    background-position: center;
+    height: 100%;
 }
 
 .information {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    height: 30%;
-    padding-top: 50px;
     padding-left: 12px;
     overflow: auto;
     font-size: 24px;

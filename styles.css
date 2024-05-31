@@ -6,8 +6,8 @@ body, html {
 .content {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
     height: 100%;
+    width: 100%;
     margin: 0 auto;
     text-shadow: 0px 2px 10px #687e93;
     ::-webkit-scrollbar {
@@ -27,6 +27,12 @@ body, html {
     }    
 }
 
+@media (min-width: 769px) {
+    .content {
+      width: 768px;
+    }
+}
+
 .sky {
     background-color: #8ea7c1;
     overflow: auto;
@@ -35,8 +41,8 @@ body, html {
 
 .image-container {
     background-image: url("images/Invitation_BG.jpg"); 
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: top;
     height: 100%;
 }
 

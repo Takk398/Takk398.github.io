@@ -9,8 +9,7 @@ body, html {
     max-width: 600px;
     height: 100%;
     margin: 0 auto;
-    font-family: "Times New Roman", Times, serif;
-    text-shadow: 2px 1.5px 2px #646464;
+    text-shadow: 0px 2px 10px #687e93;
     ::-webkit-scrollbar {
         width: 12px;
     }
@@ -49,7 +48,13 @@ body, html {
     text-align: center;
 }
 
+.korean {
+    font-family: "HYMyeongJo-Extra", "Apple SD Gothic Neo", sans-serif;
+}
+
 .english {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -79,10 +84,24 @@ body, html {
     margin-top: 80px;
 }
 
-.last-paragraph {
+.show-account-details, .directions {
     margin-bottom: 0;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
+.hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, visibility 0s 0.5s;
+    visibility: hidden;
+}
+
+.show {
+    max-height: 500px; /* you can adjust this value based on your content */
+    visibility: visible;
+    transition: max-height 0.5s ease-out, visibility 0s;
+}
 .copy-account-number{
     margin: 8px 0;
 }
@@ -107,4 +126,16 @@ button.copy:focus {
 button.copy:active {
     background-color: #8DA8C3;
     color: white;
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.tooltip.show {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
 }

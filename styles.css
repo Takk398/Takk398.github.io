@@ -43,7 +43,7 @@ html {
 }
 
 .information {
-    padding: 24px 0px 24px 12px;
+    padding: 24px;
     overflow-y: auto;
     color: white;
     text-align: center;
@@ -66,7 +66,6 @@ html {
 
 .english {
     font-family: "Crimson Text", serif;
-    font-weight: 400;
     font-style: italic;
 }
 
@@ -198,6 +197,14 @@ button:focus {
 .tooltip.show {
     visibility: visible;
     opacity: 1;
+}
+
+.closing-paragraph.korean {
+    margin-top: 56px;
+}
+
+.closing-paragraph.english {
+    margin-top: 32px;
 }
 
 .modal {

@@ -55,6 +55,10 @@ html {
     }
 }
 
+.opening-paragraph {
+    margin-bottom: 32px;
+}
+
 .korean {
     font-family: "HYMyeongJo-Extra", "Apple SD Gothic Neo", sans-serif;
     line-height: 1.5;
@@ -69,7 +73,11 @@ html {
 .names-table {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 56px;
+}
+
+.names-table p {
+    margin: 4px 0;
 }
 
 .names-table .left-column {
@@ -87,7 +95,7 @@ html {
 .date-location {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 56px;
 }
 
 .hidden {
@@ -115,6 +123,7 @@ html {
 }
 
 .address {
+    margin-top: 56px;
     margin-bottom: 0;
 }
 
@@ -132,6 +141,7 @@ button {
 button.directions {
     font-size: 12px;
     margin-top: 4px;
+    margin-bottom: 16px;
     padding: 2px;
     width: fit-content;
     align-self: center;
@@ -148,6 +158,10 @@ button.copy {
     background-color: white;
     color: #8DA8C3;
     font-size: 14px;
+}
+
+button.show-account-details {
+    margin-top: 56px;
 }
 
 /* Hover state */

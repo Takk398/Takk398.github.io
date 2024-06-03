@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
 }
@@ -11,6 +12,7 @@ body, html {
     text-shadow: 0px 2px 10px #687e93;
     height: 100%;
     width: 100%;
+
     @media (min-width: 1024px) {
         width: 1024px;
     }
@@ -21,13 +23,12 @@ body, html {
     overflow: auto;
     max-height: 45%;
     margin-top: 20%;
-    mask-image: linear-gradient(
-        to bottom, 
-        transparent, 
-        white 20px, 
-        white calc(100% - 20px), 
-        transparent
-    );
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            white 20px,
+            white calc(100% - 20px),
+            transparent);
+
     @media (min-width: 600px) {
         margin-top: unset;
         max-height: 35%;
@@ -35,7 +36,7 @@ body, html {
 }
 
 .image-container {
-    background-image: url("images/Invitation_BG.jpg"); 
+    background-image: url("images/Invitation_BG.jpg");
     background-size: cover;
     background-position: top;
     height: 100%;
@@ -48,6 +49,7 @@ body, html {
     text-align: center;
     font-size: 16px;
     position: relative;
+
     @media (min-width: 768px) {
         font-size: 18px;
     }
@@ -104,12 +106,23 @@ body, html {
     visibility: visible;
 }
 
-.copy-account-number{
+.copy-account-number {
     margin: 8px 0;
 }
 
 .address {
     margin-bottom: 0;
+}
+
+/* General button styles */
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 button.directions {
@@ -120,7 +133,7 @@ button.directions {
     align-self: center;
 }
 
-button.show-account-details, 
+button.show-account-details,
 button.directions {
     background-color: #8DA8C3;
     color: white;
@@ -133,25 +146,29 @@ button.copy {
     font-size: 14px;
 }
 
-button {
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 16px;
-    font-weight: 700;
+/* Hover state */
+button:hover {
+    box-shadow: inset 0px 0px 6px 7px #00000024;
 }
 
-button:hover,
-button:focus {
+/* Focus-visible state for keyboard navigation */
+button:focus-visible {
     box-shadow: inset 0px 0px 6px 7px #00000024;
     outline: none;
 }
 
+/* Active state */
 button:active {
+    box-shadow: inset 0px 0px 6px 7px #00000024;
     background-color: #8DA8C3;
     color: white;
 }
+
+/* Remove outline when focus is not visible */
+button:focus {
+    outline: none;
+}
+
 
 .tooltip {
     visibility: hidden;
@@ -165,46 +182,40 @@ button:active {
     opacity: 1;
 }
 
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
     position: relative;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
+    width: 80%;
+}
+
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-  
-  /* Image */
-  #mapImage {
+}
+
+#mapImage {
     width: 100%;
     height: auto;
-  }
-  
+}

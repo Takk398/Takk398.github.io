@@ -15,6 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" />
+    <script src="https://kit.fontawesome.com/6084308bce.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -65,7 +66,7 @@
                     <p lang="ko" class="address korean">분당 앤스퀘어 아모르홀<br>
                         경기도 성남시 분당구 탄천상로<br>
                         151번길 20, 분당앤스퀘어 4층</p>
-                    <button class="directions korean" data-lity data-lity-target="images/map.jpeg">오시는 길</button>
+                    <button id="map" class="directions korean" onclick="openMap()">오시는 길</button>
 
                     <p class="english">Bundang Nsquare, Amor Hall, Level 4<br>
                         20, Tancheonsang-ro 151 beon-gil,<br>
@@ -85,9 +86,12 @@
         </div>
         <div class="image-container"></div>
     </div>
-
-    <script src="https://kit.fontawesome.com/6084308bce.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMap()">&times;</span>
+            <img src="images/map.jpeg" alt="Map" id="mapImage">
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 

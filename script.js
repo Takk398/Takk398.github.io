@@ -34,21 +34,18 @@ function showAccount() {
     }
 }
 
-const directionsLink = document.querySelector('.directions');
-const modal = document.getElementById('imageModal');
-const modalImage = document.getElementById('modalImage');
-const closeBtn = document.querySelector('.close-button');
-
-directionsLink.addEventListener('click', () => {
-  modal.style.display = 'block';
-});
-
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
+function openMap() {
+    document.getElementById("mapModal").style.display = "block";
   }
-});
+
+  function closeMap() {
+    document.getElementById("mapModal").style.display = "none";
+  }
+
+  // Close the modal when the user clicks anywhere outside of the modal content
+  window.onclick = function(event) {
+    var modal = document.getElementById("mapModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }

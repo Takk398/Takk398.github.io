@@ -4,24 +4,15 @@ function copyAccount() {
 
     navigator.clipboard.writeText(copyText.value)
         .then(() => {
+            const tooltip = document.getElementById("copyTooltip"); // Get the existing tooltip
             copyIcon.classList.remove("fa-copy");
             copyIcon.classList.add("fa-clipboard-check");
-            // Create tooltip
-            const tooltip = document.createElement("div");
-            tooltip.textContent = "복사 완료";
-            tooltip.classList.add("tooltip");
-            copyText.parentElement.appendChild(tooltip);
-
-            // Show tooltip
+        
             tooltip.classList.add("show");
-
-            // Hide tooltip after a few seconds
+        
             setTimeout(() => {
                 tooltip.classList.remove("show");
-                setTimeout(() => {
-                    tooltip.remove();
-                }, 500);
-            }, 2000); // show for 2 seconds
+            }, 1000);
         })
         .catch(err => {
             console.error('Failed to copy: ', err);
@@ -31,14 +22,33 @@ function copyAccount() {
 function showAccount() {
     var hiddenDiv = document.getElementById('accountDetailsContainer');
     var informationDiv = document.querySelector('.information');
-    if (hiddenDiv.classList.contains('show')) {
-        hiddenDiv.classList.remove('show');
+    if (hiddenDiv.classList.contains('show-account')) {
+        hiddenDiv.classList.remove('show-account');
         hiddenDiv.classList.add('hidden');
     } else {
         hiddenDiv.classList.remove('hidden');
-        hiddenDiv.classList.add('show');
+        hiddenDiv.classList.add('show-account');
         setTimeout(function() {
             informationDiv.scrollTop = informationDiv.scrollHeight;
-        }); // delay the scroll to sync with the transition
+        });
     }
 }
+
+const directionsLink = document.querySelector('.directions');
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const closeBtn = document.querySelector('.close-button');
+
+directionsLink.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});

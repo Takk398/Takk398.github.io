@@ -224,6 +224,7 @@ button:focus {
     margin: 15% auto;
     padding: 20px;
     width: 80%;
+    max-width: 800px;
 }
 
 .close {
